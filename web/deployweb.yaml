@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ralphserver
+spec:
+  selector:
+    matchLabels:
+      app: ralphserver
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: ralphserver
+    spec:
+      containers:
+      - image: ralvarez1/webserver:v2.0
+        name: ralphserver
+        ports:
+        - containerPort: 5000
+          name: ralphserver
