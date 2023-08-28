@@ -1,4 +1,4 @@
-FROM python:3.11.5-bullseye
+FROM amd64/python:3.11.5-bullseye
 
 WORKDIR /python-docker
 
