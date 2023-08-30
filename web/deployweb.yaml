@@ -14,7 +14,7 @@ spec:
         app: ralphserver
     spec:
       containers:
-      - image: ralvarez1/webserver:v1.0
+      - image: ralvarez1/webserver:v3.0
         name: ralphserver
         ports:
         - containerPort: 5000
