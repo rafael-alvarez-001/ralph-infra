@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ralph-prod-argo
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/rafael-alvarez-001/ralph-infra.git
+    targetRevision: HEAD
+    path: web
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ralph-prod-auto
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    
+    automated:
+      selfHeal: true
+      prune: true
