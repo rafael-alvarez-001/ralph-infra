@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rafael-alvarez-001/ralph-infra.git
     targetRevision: HEAD
-    path: web
+    path: deployment
   destination:
     server: https://kubernetes.default.svc
     namespace: ralph-prod-auto
